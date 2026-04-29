@@ -1,16 +1,24 @@
 {
   "name": "dark-rishi-bot",
+  "private": true,
   "version": "1.0.0",
-  "description": "WhatsApp Pairing Panel",
-  "main": "api/index.js",
+  "type": "module",
   "scripts": {
-    "start": "node api/index.js"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@whiskeysockets/baileys": "latest",
-    "express": "^4.18.2",
-    "cors": "^2.8.5",
-    "pino": "^8.14.1",
-    "qrcode-terminal": "^0.12.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "lucide-react": "^0.263.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
   }
 }
+
