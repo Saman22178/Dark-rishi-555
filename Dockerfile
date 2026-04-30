@@ -1,20 +1,20 @@
-# Node.js 20 version එක පාවිච්චි කිරීම
+# Node.js 20 environment එක පාවිච්චි කිරීම
 FROM node:20
 
-# ඇප් එක රන් වෙන්න ඕනේ folder එක හැදීම
+# ඇප් එක රන් වන folder එක සකස් කිරීම
 WORKDIR /app
 
-# Dependencies install කිරීමට අවශ්‍ය ෆයිල්ස් කොපි කිරීම
+# Dependencies install කිරීමට අවශ්‍ය files කොපි කිරීම
 COPY package*.json ./
 
-# Libraries install කිරීම (Express ඇතුළුව)
+# Express ඇතුළු සියලුම libraries install කිරීම
 RUN npm install
 
-# මුළු ප්‍රොජෙක්ට් එකම (api folder එකත් ඇතුළුව) කොපි කිරීම
+# මුළු project එකම copy කිරීම (api folder එකත් ඇතුළුව)
 COPY . .
 
-# Koyeb එකට පෝට් එක විවෘත කර දීම
+# Koyeb එකට 8000 port එක විවෘත කිරීම
 EXPOSE 8000
 
-# ප්‍රධාන ෆයිල් එක (api/index.js) රන් කරන විධානය
+# ඇප් එක ආරම්භ කරන විධානය
 CMD ["node", "api/index.js"]
