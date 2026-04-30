@@ -2,7 +2,6 @@
   "name": "dark-rishi-bot",
   "private": true,
   "version": "1.0.0",
-  "type": "module",
   "scripts": {
     "start": "node api/index.js",
     "dev": "vite",
@@ -11,6 +10,9 @@
   },
   "dependencies": {
     "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "pino": "^8.14.0",
+    "@whiskeysockets/baileys": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "lucide-react": "^0.263.1"
